@@ -568,3 +568,32 @@ footer {
   }
 }
 
+/* ---------------- FOOTER LINKS (Privacy + Terms) ---------------- */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #60A5FA;
+  text-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
+}
+
+/* Make sure spacing is balanced on smaller devices */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
