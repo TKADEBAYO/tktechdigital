@@ -372,6 +372,11 @@ footer {
   color: #fff;
 }
 
+.social-links .linkedin:hover {
+  background: #0077B5;
+  color: #fff;
+}
+
 /* Responsive Footer */
 @media (max-width: 768px) {
   .footer-contact {
