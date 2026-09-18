@@ -252,6 +252,593 @@ button {
     order: -1;
   }
 }
+/* ==================================================
+   ENHANCED ABOUT / FOUNDER PAGE
+   ================================================== */
+
+/* ---------- Shared Section Heading ---------- */
+
+.section-label {
+  display: inline-block;
+  color: #60A5FA;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin: 0 0 1rem;
+  color: #fff;
+}
+
+.section-heading p {
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+
+/* ---------- Enhanced About Hero ---------- */
+
+.about-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero-content h1 {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons,
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+
+/* ---------- Founder Section ---------- */
+
+.founder-section {
+  padding: 7rem 2rem;
+}
+
+.founder-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.85fr) 1.3fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.founder-image-wrapper {
+  position: relative;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.founder-image {
+  display: block;
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 24px;
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.founder-badge {
+  position: absolute;
+  right: -25px;
+  bottom: 30px;
+  min-width: 125px;
+  padding: 1rem 1.4rem;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.founder-badge span {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.founder-badge strong {
+  display: block;
+  margin-top: 0.2rem;
+  color: #60A5FA;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+}
+
+.founder-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.3rem, 4vw, 3.4rem);
+  margin: 0 0 0.4rem;
+  line-height: 1.1;
+}
+
+.founder-content h3 {
+  margin: 0 0 1.8rem;
+  color: #60A5FA;
+  font-size: 1.15rem;
+}
+
+.founder-content > p {
+  color: #e2e8f0;
+  line-height: 1.85;
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+
+/* ---------- Founder Quote ---------- */
+
+.founder-quote {
+  position: relative;
+  margin-top: 2rem;
+  padding: 1.6rem 1.8rem;
+  border-left: 3px solid #60A5FA;
+  border-radius: 0 12px 12px 0;
+  background: rgba(96, 165, 250, 0.08);
+}
+
+.founder-quote i {
+  color: #60A5FA;
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.founder-quote p {
+  margin: 0 0 0.6rem;
+  color: #fff;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.founder-quote span {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+
+/* ---------- Motivation Section ---------- */
+
+.motivation-section {
+  padding: 6rem 2rem;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.motivation-grid {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.motivation-card {
+  padding: 2.3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.motivation-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(96, 165, 250, 0.45);
+  background: rgba(96, 165, 250, 0.08);
+}
+
+.motivation-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border-radius: 14px;
+  background: rgba(37, 99, 235, 0.16);
+}
+
+.motivation-icon i {
+  color: #60A5FA;
+  font-size: 1.6rem;
+}
+
+.motivation-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.motivation-card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+
+/* ---------- About Services ---------- */
+
+.about-services-section {
+  padding: 6rem 2rem;
+}
+
+.about-services-grid {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.about-service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.3rem;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about-service-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+.about-service-item > i {
+  color: #60A5FA;
+  font-size: 1.7rem;
+  margin-top: 0.2rem;
+}
+
+.about-service-item h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+}
+
+.about-service-item p {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.center-button {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.center-button .btn i {
+  margin-left: 0.5rem;
+}
+
+
+/* ---------- Values Improvements ---------- */
+
+.values-section {
+  padding: 6rem 2rem;
+}
+
+.values-section .values-grid {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.value-card {
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+/* ---------- FAQ ---------- */
+
+.faq-section {
+  padding: 7rem 2rem;
+}
+
+.faq-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.045);
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+.faq-item.active {
+  border-color: rgba(96, 165, 250, 0.55);
+  background: rgba(96, 165, 250, 0.07);
+}
+
+.faq-question {
+  width: 100%;
+  margin: 0;
+  padding: 1.4rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.faq-question:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.faq-question i {
+  flex-shrink: 0;
+  color: #60A5FA;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.faq-item.active .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-inner {
+  overflow: hidden;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 0 1.5rem 1.5rem;
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+
+/* ---------- Final CTA ---------- */
+
+.about-cta {
+  margin: 2rem auto 5rem;
+  padding: 0 2rem;
+}
+
+.about-cta-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 24px;
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(37, 99, 235, 0.3),
+      rgba(15, 23, 42, 0.65) 60%
+    );
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.about-cta-content h2 {
+  margin: 0 0 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.about-cta-content > p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.btn-whatsapp {
+  background: #16a34a;
+}
+
+.btn-whatsapp:hover {
+  background: #15803d;
+}
+
+
+/* ---------- Scroll Reveal ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+
+.reveal.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ---------- Responsive About Page ---------- */
+
+@media (max-width: 900px) {
+
+  .founder-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .founder-image-wrapper {
+    max-width: 400px;
+  }
+
+  .founder-image {
+    height: 500px;
+  }
+
+  .founder-content {
+    text-align: center;
+  }
+
+  .founder-quote {
+    text-align: left;
+  }
+
+  .motivation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .about-hero {
+    padding: 5rem 1.25rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .founder-section,
+  .motivation-section,
+  .about-services-section,
+  .values-section,
+  .faq-section {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .founder-image {
+    height: 440px;
+  }
+
+  .founder-badge {
+    right: 12px;
+    bottom: 15px;
+  }
+
+  .hero-buttons,
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn,
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .about-service-item {
+    padding: 1.5rem;
+  }
+
+  .about-cta {
+    padding: 0 1.25rem;
+  }
+
+  .about-cta-content {
+    padding: 3rem 1.4rem;
+  }
+}
+
+
+/* Respect reduced-motion accessibility setting */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 /* ---------------- SECTION ANIMATIONS ---------------- */
 
