@@ -202,6 +202,14 @@ button {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
+/* Centre the final homepage service when there are 5 services */
+.home-services-grid
+.home-service-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: calc(50% - 0.75rem);
+  justify-self: center;
+  box-sizing: border-box;
+}
 
 .home-service-card {
   position: relative;
@@ -976,6 +984,14 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+}
+/* Centre the final About service when there are 5 services */
+.about-services-grid
+.about-service-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: calc(50% - 0.75rem);
+  justify-self: center;
+  box-sizing: border-box;
 }
 
 .about-service-item {
