@@ -1623,6 +1623,14 @@ footer {
   gap: 1.7rem;
 }
 
+.enhanced-services-grid
+.enhanced-service-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: calc(50% - 0.85rem);
+  justify-self: center;
+  box-sizing: border-box;
+}
+
 .enhanced-service-card {
   position: relative;
   overflow: hidden;
@@ -1925,6 +1933,11 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .enhanced-services-grid
+  .enhanced-service-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    width: 100%;
+  }
   .services-process-grid {
     grid-template-columns: 1fr;
   }
