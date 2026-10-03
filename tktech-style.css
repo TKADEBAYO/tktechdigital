@@ -4752,3 +4752,699 @@ a.contact-method-card:hover .method-arrow {
   }
 
 }
+/* ==================================================
+   PORTFOLIO / OUR WORK PAGE
+   ================================================== */
+
+
+/* ---------- Portfolio Hero ---------- */
+
+.portfolio-hero {
+  position: relative;
+  min-height: 520px;
+  padding: 6rem 2rem;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(15, 23, 42, 0.82),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url('images/services-bg.jpg') center/cover no-repeat;
+}
+
+
+.portfolio-hero::after {
+  content: "";
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  top: -220px;
+  right: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(37, 99, 235, 0.22);
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+
+.portfolio-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 950px;
+
+  margin: 0 auto;
+}
+
+
+.portfolio-hero .section-label {
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: heroFadeIn 1.2s ease forwards;
+}
+
+
+.portfolio-hero h1 {
+  max-width: 900px;
+
+  margin: 0 auto 1.5rem;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 800;
+
+  line-height: 1.08;
+  letter-spacing: -2px;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: heroFadeIn 1.5s ease forwards;
+  animation-delay: 0.2s;
+}
+
+
+.portfolio-highlight {
+  display: block;
+  color: #60A5FA;
+}
+
+
+.portfolio-hero-content > p {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  color: #dbeafe;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: heroFadeIn 1.5s ease forwards;
+  animation-delay: 0.45s;
+}
+
+
+.portfolio-hero-points {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 1.5rem;
+
+  margin-top: 2.5rem;
+
+  color: #cbd5e1;
+  font-size: 0.9rem;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: heroFadeIn 1.5s ease forwards;
+  animation-delay: 0.7s;
+}
+
+
+.portfolio-hero-points span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+.portfolio-hero-points i {
+  color: #60A5FA;
+}
+
+
+/* ---------- Introduction ---------- */
+
+.portfolio-intro {
+  padding: 6rem 2rem 2rem;
+}
+
+
+/* ---------- Projects ---------- */
+
+.portfolio-projects {
+  padding: 3rem 2rem 7rem;
+}
+
+
+.portfolio-grid {
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 2rem;
+}
+
+
+/* Centre third project */
+.portfolio-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+
+  width: calc(50% - 1rem);
+
+  justify-self: center;
+}
+
+
+/* ---------- Project Card ---------- */
+
+.portfolio-card {
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.09);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.22);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(96, 165, 250, 0.4);
+
+  box-shadow:
+    0 28px 65px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ---------- Website Screenshot ---------- */
+
+.portfolio-image-wrapper {
+  position: relative;
+
+  height: 320px;
+
+  overflow: hidden;
+
+  background: #0f172a;
+}
+
+
+.portfolio-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top;
+
+  transition:
+    transform 0.55s ease,
+    filter 0.4s ease;
+}
+
+
+.portfolio-card:hover .portfolio-image {
+  transform: scale(1.04);
+  filter: brightness(0.55);
+}
+
+
+/* ---------- Screenshot Overlay ---------- */
+
+.portfolio-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(15, 23, 42, 0.35);
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+
+.portfolio-card:hover .portfolio-image-overlay {
+  opacity: 1;
+}
+
+
+.portfolio-preview-button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.6rem;
+
+  padding: 0.9rem 1.3rem;
+
+  border-radius: 9px;
+
+  background: #2563EB;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transform: translateY(12px);
+
+  transition:
+    transform 0.35s ease,
+    background 0.25s ease;
+}
+
+
+.portfolio-card:hover
+.portfolio-preview-button {
+  transform: translateY(0);
+}
+
+
+.portfolio-preview-button:hover {
+  background: #1D4ED8;
+}
+
+
+/* ---------- Project Information ---------- */
+
+.portfolio-card-content {
+  padding: 2.2rem;
+}
+
+
+.portfolio-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+
+  margin-bottom: 1.3rem;
+}
+
+
+.portfolio-number {
+  color: rgba(255, 255, 255, 0.22);
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+
+.portfolio-category {
+  padding: 0.4rem 0.75rem;
+
+  border-radius: 50px;
+
+  background:
+    rgba(37, 99, 235, 0.14);
+
+  border:
+    1px solid rgba(96, 165, 250, 0.18);
+
+  color: #60A5FA;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+
+.portfolio-card h2 {
+  margin: 0 0 0.3rem;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.65rem;
+}
+
+
+.portfolio-client {
+  margin: 0 0 1.2rem !important;
+
+  color: #60A5FA !important;
+
+  font-size: 0.88rem !important;
+  font-weight: 600;
+}
+
+
+.portfolio-card-content > p {
+  margin: 0 0 1.4rem;
+
+  color: #cbd5e1;
+
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+
+/* ---------- Technology / Project Tags ---------- */
+
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.55rem;
+
+  margin-bottom: 1.7rem;
+}
+
+
+.portfolio-tags span {
+  padding: 0.4rem 0.7rem;
+
+  border-radius: 6px;
+
+  background:
+    rgba(255, 255, 255, 0.055);
+
+  color: #cbd5e1;
+
+  font-size: 0.72rem;
+}
+
+
+/* ---------- Project Link ---------- */
+
+.portfolio-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.6rem;
+
+  color: #60A5FA;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+
+.portfolio-link i {
+  transition: transform 0.25s ease;
+}
+
+
+.portfolio-link:hover i {
+  transform: translateX(6px);
+}
+
+
+/* ---------- Approach ---------- */
+
+.portfolio-approach {
+  padding: 7rem 2rem;
+
+  background:
+    rgba(0, 0, 0, 0.28);
+}
+
+
+.portfolio-approach-grid {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1.5rem;
+}
+
+
+.portfolio-approach-card {
+  padding: 2.2rem;
+
+  text-align: center;
+
+  border-radius: 18px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.portfolio-approach-card:hover {
+  transform: translateY(-6px);
+
+  border-color:
+    rgba(96, 165, 250, 0.4);
+
+  background:
+    rgba(96, 165, 250, 0.06);
+}
+
+
+.portfolio-approach-icon {
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 1.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background:
+    rgba(37, 99, 235, 0.16);
+}
+
+
+.portfolio-approach-icon i {
+  color: #60A5FA;
+  font-size: 1.6rem;
+}
+
+
+.portfolio-approach-card h3 {
+  margin: 0 0 0.8rem;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+
+.portfolio-approach-card p {
+  margin: 0;
+
+  color: #cbd5e1;
+
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+
+/* ---------- Portfolio CTA ---------- */
+
+.portfolio-cta {
+  padding: 5rem 2rem 6rem;
+}
+
+
+.portfolio-cta-content {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 4.5rem 2rem;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-radius: 25px;
+
+  border:
+    1px solid rgba(96, 165, 250, 0.25);
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(37, 99, 235, 0.3),
+      rgba(15, 23, 42, 0.7) 60%
+    );
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+.portfolio-cta-content h2 {
+  margin: 0 0 1rem;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size:
+    clamp(2rem, 4vw, 3rem);
+}
+
+
+.portfolio-cta-content > p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #cbd5e1;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+/* ---------- Portfolio Responsive ---------- */
+
+@media (max-width: 900px) {
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .portfolio-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    width: 100%;
+  }
+
+
+  .portfolio-approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .portfolio-hero {
+    min-height: auto;
+
+    padding: 5rem 1.25rem;
+  }
+
+
+  .portfolio-hero h1 {
+    font-size: 2.6rem;
+
+    letter-spacing: -1px;
+  }
+
+
+  .portfolio-hero-content > p {
+    font-size: 1rem;
+  }
+
+
+  .portfolio-hero-points {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0.8rem;
+  }
+
+
+  .portfolio-intro {
+    padding:
+      4.5rem 1.25rem
+      1.5rem;
+  }
+
+
+  .portfolio-projects {
+    padding:
+      2rem 1.25rem
+      4.5rem;
+  }
+
+
+  .portfolio-image-wrapper {
+    height: 230px;
+  }
+
+
+  .portfolio-card-content {
+    padding: 1.5rem;
+  }
+
+
+  .portfolio-card-top {
+    align-items: flex-start;
+  }
+
+
+  .portfolio-approach {
+    padding:
+      4.5rem 1.25rem;
+  }
+
+
+  .portfolio-approach-card {
+    padding: 1.7rem;
+  }
+
+
+  .portfolio-cta {
+    padding:
+      4rem 1.25rem;
+  }
+
+
+  .portfolio-cta-content {
+    padding:
+      3rem 1.4rem;
+  }
+
+}
