@@ -1,24 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ==========================================
-     ACTIVE NAVIGATION
-     ========================================== */
+/* ==========================================
+   ACTIVE NAVIGATION
+   ========================================== */
 
-  const currentPage =
-    window.location.pathname.split("/").pop() || "index.html";
+const currentPath = window.location.pathname;
 
-  const menuItems = document.querySelectorAll("nav a");
+const menuItems = document.querySelectorAll("nav a");
 
-  menuItems.forEach(link => {
-    const linkPage = link.getAttribute("href");
+menuItems.forEach(link => {
 
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
+  const linkPath =
+    new URL(link.href, window.location.origin).pathname;
+
+  const normalizePath = path => {
+
+    path = path.replace(/index\.html$/, "");
+
+    if (path !== "/" && !path.endsWith("/")) {
+      path += "/";
     }
-  });
 
+    return path;
+  };
+
+  if (
+    normalizePath(linkPath) ===
+    normalizePath(currentPath)
+  ) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+
+});
 
   /* ==========================================
      SMOOTH SCROLL

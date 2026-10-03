@@ -84,7 +84,7 @@ app.post("/send", upload.none(), async (req, res) => {
     }
 
     // ✅ Redirect to confirmation page
-    res.redirect("/message-sent.html");
+    res.redirect("/message-sent/");
 
   } catch (error) {
     console.error("❌ Error sending email:", error);
