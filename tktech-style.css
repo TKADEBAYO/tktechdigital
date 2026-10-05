@@ -696,9 +696,32 @@ button {
     grid-template-columns: 1fr;
   }
 
+  /* Reset centred fifth service card on tablet/mobile */
+  .home-services-grid
+  .home-service-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    width: 100%;
+    justify-self: stretch;
+  }
+
   .home-about-container {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+
+  .home-about-visual {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-arrow {
+    transform: rotate(90deg);
+    text-align: center;
   }
 
   .home-about-visual {
@@ -1450,6 +1473,14 @@ button {
 
   .about-services-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Reset fifth service to full width */
+  .about-services-grid
+  .about-service-item:last-child:nth-child(odd) {
+    grid-column: auto;
+    width: 100%;
+    justify-self: stretch;
   }
 }
 
@@ -5665,4 +5696,33 @@ a.contact-method-card:hover .method-arrow {
       3rem 1.4rem;
   }
 
+}
+/* ==================================================
+   SERVICE CARD MOBILE CONSISTENCY
+   Ensures the fifth centred card becomes full width
+   on tablet and mobile
+   ================================================== */
+
+@media (max-width: 900px) {
+
+  .home-services-grid,
+  .about-services-grid,
+  .enhanced-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-services-grid
+  .home-service-card:last-child:nth-child(odd),
+
+  .about-services-grid
+  .about-service-item:last-child:nth-child(odd),
+
+  .enhanced-services-grid
+  .enhanced-service-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+    box-sizing: border-box;
+  }
 }
