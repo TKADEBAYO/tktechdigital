@@ -17,31 +17,272 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-header {
+/* ==================================================
+   HEADER / NAVIGATION
+   ================================================== */
+
+.site-header {
+  position: relative;
+  z-index: 1000;
+
+  width: 100%;
+  box-sizing: border-box;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 1rem 2rem;
+
+  background: rgba(8, 27, 72, 0.96);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .logo {
-  height: 50px;
+  display: block;
+  width: auto;
+  height: 55px;
 }
 
-nav ul {
-  list-style: none;
+
+/* ---------- Desktop Navigation ---------- */
+
+.main-navigation ul {
   display: flex;
-  gap: 20px;
+  align-items: center;
+
+  gap: 2rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
-nav a {
-  text-decoration: none;
+.main-navigation li {
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation a {
+  position: relative;
+
+  display: block;
+
+  padding: 0.5rem 0;
+
   color: #fff;
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
   font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: color 0.25s ease;
 }
 
-nav a.active, nav a:hover {
-  border-bottom: 2px solid #fff;
+.main-navigation a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #60A5FA;
+
+  transition: width 0.25s ease;
+}
+
+.main-navigation a:hover,
+.main-navigation a.active {
+  color: #60A5FA;
+}
+
+.main-navigation a:hover::after,
+.main-navigation a.active::after {
+  width: 100%;
+}
+
+
+/* ---------- Hamburger Button ---------- */
+
+.mobile-menu-toggle {
+  display: none;
+
+  width: 46px;
+  height: 46px;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+
+  width: 22px;
+  height: 2px;
+
+  border-radius: 5px;
+
+  background: #fff;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* ==================================================
+   MOBILE NAVIGATION
+   ================================================== */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 0.9rem 1.25rem;
+  }
+
+  .logo {
+    height: 52px;
+  }
+
+
+  /* Show hamburger */
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+
+  /* Hide menu initially */
+
+  .main-navigation {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    padding: 0 1.25rem;
+
+    box-sizing: border-box;
+
+    background: rgba(8, 27, 72, 0.98);
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+
+  /* Open menu */
+
+  .main-navigation.menu-open {
+    max-height: 500px;
+
+    padding-top: 0.7rem;
+    padding-bottom: 1.2rem;
+
+    opacity: 1;
+
+    visibility: visible;
+  }
+
+
+  .main-navigation ul {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    width: 100%;
+  }
+
+
+  .main-navigation li {
+    width: 100%;
+  }
+
+
+  .main-navigation a {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 0.9rem 0;
+
+    border-bottom:
+      1px solid rgba(255, 255, 255, 0.08);
+
+    font-size: 1rem;
+
+    text-align: left;
+  }
+
+
+  .main-navigation li:last-child a {
+    border-bottom: none;
+  }
+
+
+  .main-navigation a::after {
+    display: none;
+  }
+
+
+  .main-navigation a.active {
+    color: #60A5FA;
+  }
+
+
+  /* Hamburger becomes X */
+
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
 }
 
 .hero {
