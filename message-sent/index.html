@@ -1,95 +1,554 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
   <title>Message Sent | TK Tech</title>
-   <link rel="icon" type="image/png" href="/images/tktech-favicon.png">
+
+  <meta
+    name="description"
+    content="Thank you for contacting TK Tech. Your message has been received and we will be in touch shortly."
+  >
+
+  <meta name="robots" content="noindex, follow">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="/images/tktech-favicon.png"
+  >
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/tktech-style.css">
+  <!-- Main Styles -->
+  <link
+    rel="stylesheet"
+    href="/tktech-style.css"
+  >
+
 </head>
+
+
 <body>
-  <!-- Header -->
+
+
+  <!-- ========================================
+       HEADER
+       ======================================== -->
+
   <header class="site-header">
 
-  <a href="/" class="logo-link" aria-label="TK Tech Home">
-    <img
-      src="/images/tktechlogo.png"
-      alt="TK Tech Logo"
-      class="logo"
+    <a
+      href="/"
+      class="logo-link"
+      aria-label="TK Tech Home"
     >
-  </a>
 
-  <button
-    class="mobile-menu-toggle"
-    type="button"
-    aria-label="Open navigation menu"
-    aria-expanded="false"
-    aria-controls="main-navigation"
-  >
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+      <img
+        src="/images/tktechlogo.png"
+        alt="TK Tech Logo"
+        class="logo"
+      >
 
-  <nav
-    id="main-navigation"
-    class="main-navigation"
-    aria-label="Main navigation"
-  >
+    </a>
 
-    <ul>
 
-      <li>
-        <a href="/">
-          Home
-        </a>
-      </li>
+    <button
+      class="mobile-menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
 
-      <li>
-        <a href="/about/">
-          About
-        </a>
-      </li>
+      <span></span>
+      <span></span>
+      <span></span>
 
-      <li>
-        <a href="/services/">
-          Services
-        </a>
-      </li>
+    </button>
 
-      <li>
-        <a href="/portfolio/">
-          Our Work
-        </a>
-      </li>
 
-      <li>
-        <a href="/contact/">
-          Contact
-        </a>
-      </li>
+    <nav
+      id="main-navigation"
+      class="main-navigation"
+      aria-label="Main navigation"
+    >
 
-    </ul>
+      <ul>
 
-  </nav>
+        <li>
+          <a href="/">
+            Home
+          </a>
+        </li>
 
-</header>
-  <!-- Message Hero -->
-  <section class="contact-hero">
-    <h1>✅ Message Sent</h1>
-    <p>Thank you for reaching out to TK Tech. We’ll get back to you shortly.</p>
-    <a href="/" class="btn">Return to Home</a>
-  </section>
+        <li>
+          <a href="/about/">
+            About
+          </a>
+        </li>
 
-<!-- ========================================
+        <li>
+          <a href="/services/">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="/portfolio/">
+            Our Work
+          </a>
+        </li>
+
+        <li>
+          <a href="/contact/">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- ========================================
+         SUCCESS HERO
+         ======================================== -->
+
+    <section class="message-sent-hero">
+
+      <div class="message-sent-glow"></div>
+
+
+      <div class="message-sent-container">
+
+
+        <!-- Success Icon -->
+
+        <div
+          class="message-success-icon"
+          aria-hidden="true"
+        >
+
+          <i class="fas fa-check"></i>
+
+        </div>
+
+
+        <span class="section-label">
+          MESSAGE RECEIVED
+        </span>
+
+
+        <h1>
+          Thanks for Getting
+          <span class="message-highlight">
+            in Touch.
+          </span>
+        </h1>
+
+
+        <p class="message-sent-intro">
+
+          Your message has been successfully sent to
+          <strong>TK Tech</strong>. Thank you for reaching
+          out. We'll review your enquiry and get back to
+          you as soon as possible.
+
+        </p>
+
+
+        <div class="message-status">
+
+          <i class="fas fa-circle-check"></i>
+
+          <span>
+            Your enquiry has been received successfully
+          </span>
+
+        </div>
+
+
+        <div class="message-sent-buttons">
+
+          <a
+            href="/"
+            class="btn"
+          >
+
+            <i class="fas fa-house"></i>
+
+            Return to Home
+
+          </a>
+
+
+          <a
+            href="/services/"
+            class="btn btn-outline"
+          >
+
+            Explore Our Services
+
+            <i class="fas fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         WHAT HAPPENS NEXT
+         ======================================== -->
+
+    <section class="message-next-section reveal">
+
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          WHAT HAPPENS NEXT
+        </span>
+
+        <h2>
+          We'll Take It From Here.
+        </h2>
+
+        <p>
+          Your enquiry is now with TK Tech. Here's what
+          you can expect next.
+        </p>
+
+      </div>
+
+
+
+      <div class="message-next-grid">
+
+
+        <!-- Step 1 -->
+
+        <article class="message-next-card">
+
+          <span class="message-step-number">
+            01
+          </span>
+
+          <div class="message-next-icon">
+
+            <i class="fas fa-envelope-open-text"></i>
+
+          </div>
+
+          <h3>
+            We Review Your Enquiry
+          </h3>
+
+          <p>
+            We'll look through the information you've
+            provided so we can understand what you're
+            looking to achieve.
+          </p>
+
+        </article>
+
+
+
+        <div
+          class="message-next-arrow"
+          aria-hidden="true"
+        >
+
+          <i class="fas fa-arrow-right"></i>
+
+        </div>
+
+
+
+        <!-- Step 2 -->
+
+        <article class="message-next-card">
+
+          <span class="message-step-number">
+            02
+          </span>
+
+          <div class="message-next-icon">
+
+            <i class="fas fa-comments"></i>
+
+          </div>
+
+          <h3>
+            We'll Get in Touch
+          </h3>
+
+          <p>
+            We'll contact you to discuss your enquiry,
+            answer any questions and understand your
+            requirements in more detail.
+          </p>
+
+        </article>
+
+
+
+        <div
+          class="message-next-arrow"
+          aria-hidden="true"
+        >
+
+          <i class="fas fa-arrow-right"></i>
+
+        </div>
+
+
+
+        <!-- Step 3 -->
+
+        <article class="message-next-card">
+
+          <span class="message-step-number">
+            03
+          </span>
+
+          <div class="message-next-icon">
+
+            <i class="fas fa-lightbulb"></i>
+
+          </div>
+
+          <h3>
+            We Plan the Next Step
+          </h3>
+
+          <p>
+            If we're a good fit, we'll recommend the
+            right approach and explain how TK Tech can
+            help move your idea or business forward.
+          </p>
+
+        </article>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         NEED TO SPEAK SOONER
+         ======================================== -->
+
+    <section class="message-contact-section reveal">
+
+
+      <div class="message-contact-card">
+
+
+        <div class="message-contact-icon">
+
+          <i class="fas fa-headset"></i>
+
+        </div>
+
+
+        <div class="message-contact-content">
+
+
+          <span class="section-label">
+            NEED TO SPEAK SOONER?
+          </span>
+
+
+          <h2>
+            You Can Reach TK Tech Directly.
+          </h2>
+
+
+          <p>
+            If you'd like to follow up on your enquiry,
+            you can contact us directly by email, phone
+            or WhatsApp.
+          </p>
+
+
+          <div class="message-contact-options">
+
+
+            <a
+              href="mailto:tktech.business@outlook.com"
+              class="message-contact-link"
+            >
+
+              <i class="fas fa-envelope"></i>
+
+              <div>
+
+                <span>Email</span>
+
+                <strong>
+                  tktech.business@outlook.com
+                </strong>
+
+              </div>
+
+            </a>
+
+
+
+            <a
+              href="tel:+447401563425"
+              class="message-contact-link"
+            >
+
+              <i class="fas fa-phone"></i>
+
+              <div>
+
+                <span>Call</span>
+
+                <strong>
+                  07401 563425
+                </strong>
+
+              </div>
+
+            </a>
+
+
+
+            <a
+              href="https://wa.me/447401563425"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="message-contact-link message-whatsapp"
+            >
+
+              <i class="fab fa-whatsapp"></i>
+
+              <div>
+
+                <span>WhatsApp</span>
+
+                <strong>
+                  Message TK Tech
+                </strong>
+
+              </div>
+
+            </a>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         FINAL CTA
+         ======================================== -->
+
+    <section class="message-final-cta reveal">
+
+      <div class="message-final-cta-content">
+
+
+        <span class="section-label">
+          WHILE YOU'RE HERE
+        </span>
+
+
+        <h2>
+          See What TK Tech Can Build for You.
+        </h2>
+
+
+        <p>
+          Explore our work and discover how we help
+          businesses through websites, AI chatbots,
+          automation, social media services and
+          responsible AI governance.
+        </p>
+
+
+        <div class="cta-buttons">
+
+
+          <a
+            href="/portfolio/"
+            class="btn"
+          >
+
+            View Our Work
+
+            <i class="fas fa-arrow-right"></i>
+
+          </a>
+
+
+          <a
+            href="/services/"
+            class="btn btn-outline"
+          >
+
+            Explore Services
+
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ========================================
        FOOTER
        ======================================== -->
 
@@ -99,14 +558,18 @@
 
 
       <p class="footer-copy">
+
         © <span id="currentYear"></span>
         TK Tech. All Rights Reserved.
+
       </p>
+
 
 
       <!-- Contact -->
 
       <div class="footer-contact">
+
 
         <a href="mailto:tktech.business@outlook.com">
 
@@ -124,6 +587,7 @@
           07401 563425
 
         </a>
+
 
       </div>
 
@@ -217,7 +681,7 @@
         <span>|</span>
 
 
-       <a href="/terms/">
+        <a href="/terms/">
 
           Terms of Service
 
@@ -231,7 +695,13 @@
 
   </footer>
 
-  <!-- Main JS -->
+
+
+  <!-- Main JavaScript -->
+
   <script src="/main.js"></script>
+
+
 </body>
+
 </html>
