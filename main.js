@@ -1,45 +1,76 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ==========================================
-     ACTIVE NAVIGATION
-     ========================================== */
+ /* ==========================================
+   ACTIVE NAVIGATION
+   ========================================== */
 
-  const currentPath = window.location.pathname;
-
-  const menuItems =
-    document.querySelectorAll(".main-navigation a");
-
-  const normalizePath = (path) => {
-
-    path = path.replace(/index\.html$/, "");
-
-    if (path !== "/" && !path.endsWith("/")) {
-      path += "/";
-    }
-
-    return path;
-  };
+const menuItems =
+  document.querySelectorAll(".main-navigation a");
 
 
-  menuItems.forEach(link => {
+const normalizePath = (path) => {
 
-    const linkPath =
-      new URL(
-        link.href,
-        window.location.origin
-      ).pathname;
+  if (!path) {
+    return "/";
+  }
 
-    if (
-      normalizePath(linkPath) ===
-      normalizePath(currentPath)
-    ) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
+  // Remove query strings and hashes
+  path = path.split("?")[0].split("#")[0];
 
-  });
+  // Remove index.html
+  path = path.replace(/\/index\.html$/i, "/");
 
+  // Support old .html URLs
+  path = path.replace(/\.html$/i, "");
+
+  // Remove duplicate slashes
+  path = path.replace(/\/+/g, "/");
+
+  // Remove final slash except homepage
+  if (path.length > 1) {
+    path = path.replace(/\/$/, "");
+  }
+
+  return path.toLowerCase();
+};
+
+
+const currentPath =
+  normalizePath(window.location.pathname);
+
+
+menuItems.forEach(link => {
+
+  const linkURL =
+    new URL(
+      link.getAttribute("href"),
+      window.location.origin
+    );
+
+  const linkPath =
+    normalizePath(linkURL.pathname);
+
+
+  if (linkPath === currentPath) {
+
+    link.classList.add("active");
+
+    link.setAttribute(
+      "aria-current",
+      "page"
+    );
+
+  } else {
+
+    link.classList.remove("active");
+
+    link.removeAttribute(
+      "aria-current"
+    );
+
+  }
+
+});
 
   /* ==========================================
      MOBILE NAVIGATION
