@@ -1118,6 +1118,234 @@ button {
   margin-bottom: 1.25rem;
 }
 
+/* ==================================================
+   ABOUT PAGE - FOUNDER SECTION LAYOUT FIX
+   ================================================== */
+
+.founder-section {
+  padding: 7rem 2rem;
+  scroll-margin-top: 30px;
+}
+
+/* Main two-column layout */
+
+.founder-section .founder-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.85fr)
+    minmax(0, 1.15fr);
+
+  align-items: start;
+  gap: clamp(2.5rem, 5vw, 5rem);
+}
+
+/* Founder photograph */
+
+.founder-section .founder-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  margin: 0;
+  align-self: start;
+}
+
+.founder-section .founder-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+  object-position: center 25%;
+
+  border-radius: 22px;
+
+  border: 1px solid
+    rgba(96, 165, 250, 0.3);
+
+  box-shadow:
+    0 25px 65px rgba(0, 0, 0, 0.35);
+}
+
+/* Founder badge */
+
+.founder-section .founder-badge {
+  position: absolute;
+  right: -12px;
+  bottom: 25px;
+
+  min-width: 120px;
+  padding: 1rem 1.3rem;
+
+  border-radius: 14px;
+
+  background: rgba(15, 23, 42, 0.96);
+
+  border: 1px solid
+    rgba(96, 165, 250, 0.35);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Biography column */
+
+.founder-section .founder-content {
+  min-width: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.founder-section .founder-heading {
+  margin-bottom: 2rem;
+}
+
+.founder-section .founder-heading h2 {
+  margin: 0 0 0.9rem;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.founder-section .founder-name-highlight {
+  color: #60A5FA;
+}
+
+.founder-section .founder-heading h3 {
+  margin: 0;
+  color: #93C5FD;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Biography paragraphs */
+
+.founder-section .founder-content > p {
+  max-width: 680px;
+
+  margin: 0 0 1.4rem;
+
+  color: #dbeafe;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+.founder-section .founder-content > p strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Quote */
+
+.founder-section .founder-quote {
+  margin-top: 2.5rem;
+  padding: 1.8rem 2rem;
+
+  border-left: 3px solid #60A5FA;
+  border-radius: 0 16px 16px 0;
+
+  background: rgba(96, 165, 250, 0.08);
+}
+
+.founder-section .founder-quote p {
+  font-family: 'Lora', serif;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 900px) {
+
+  .founder-section .founder-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 700px;
+  }
+
+  .founder-section .founder-image-wrapper {
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .founder-section .founder-content {
+    text-align: left;
+  }
+
+  .founder-section .founder-heading {
+    text-align: center;
+  }
+
+}
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 600px) {
+
+  .founder-section {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .founder-section .founder-container {
+    gap: 2.5rem;
+  }
+
+  .founder-section .founder-image-wrapper {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .founder-section .founder-image {
+    aspect-ratio: 4 / 5;
+    border-radius: 18px;
+  }
+
+  .founder-section .founder-badge {
+    right: 10px;
+    bottom: 15px;
+    padding: 0.8rem 1rem;
+  }
+
+  .founder-section .founder-heading h2 {
+    font-size: clamp(1.9rem, 7vw, 2.4rem);
+    letter-spacing: -0.5px;
+  }
+
+  .founder-section .founder-content > p {
+    font-size: 0.96rem;
+    line-height: 1.85;
+  }
+
+  .founder-section .founder-quote {
+    padding: 1.5rem;
+  }
+
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .founder-section .founder-image {
+    transition: none;
+  }
+
+}
+
 
 /* ---------- Founder Quote ---------- */
 
